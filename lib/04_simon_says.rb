@@ -20,7 +20,9 @@ def first_word(sentence)
 end
 
 def titleize(sentence)
-    return sentence.split(' ').each {|x| x.capitalize! if x.size > 3}.join(" ")
+    local = sentence.split(' ').each {|x| x.capitalize! if x.size > 3}.join(" ")
+    local[0] = local[0].upcase
+    return local
 end
 
 
